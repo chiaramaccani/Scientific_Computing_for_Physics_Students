@@ -61,6 +61,7 @@ If the installation was successful, it will be printed something like `Docker ve
 
 
 ## 3. Install Docker on Windows
+### Step 1: Download the Almalinux9 Image
 - Open a **Terminal** (you can open it directly in Docker Desktop clicking on the icon in the bottom right corner)
 - Download the **Almalinux9 Image**:
  ```sh
@@ -71,8 +72,8 @@ If the command is exectued correcly, the AlmaLinux9 image should appear in Docke
   <img src='https://github.com/chiaramaccani/Scientific_Computing_for_Physics_Students/blob/main/task01/images/Docker10.JPG?raw=true' alt='Docker Image 10' style='width:1000px;'/>
 </p0
 
-
-- Start an new **Almalinux9 container** in interactive mode (`-it`), choosing the container name (for example `SciCompAL9`).
+### Step 2: Run a new Almalinux9 Container
+- Start an new **Almalinux9 Container** in interactive mode (`-it`), choosing the container name (for example `SciCompAL9`).
 
 ```sh
 docker run -it --name [NAME] almalinux:9 bash
@@ -84,19 +85,22 @@ If the command is exectued correcly, the new container should appear in Docker D
   <img src='https://github.com/chiaramaccani/Scientific_Computing_for_Physics_Students/blob/main/task01/images/Docker09.JPG?raw=true' alt='Docker Image 10' style='width:1000px;'/>
 </p>
 
-To check that the correct OS is running, check the output of the command
+ - To check that the correct OS is running, check the output of the command
 ```sh
 cat /etc/os-release
 ```
-- To **exit** the container
+- **Exit** the container
 ```sh
 exit
 ```
-and to **stop** it
-```sh
-docker stop [NAME]
-```
+
+### Step 3: Start and stop containers
+
 - To **start** the container again in interactive mode
 ```sh
 docker start -ai [NAME]
+```
+- To **stop** it
+```sh
+docker stop [NAME]
 ```
