@@ -1,5 +1,7 @@
 # Installing WSL and Docker on Windows
+Docker is a platform that allows you to package applications and their dependencies into isolated containers, ensuring they run consistently across different environments. It simplifies deployment, enhances scalability, and avoids compatibility issues.
 
+On Windows, Docker relies on a Linux-based architecture, so installing WSL (Windows Subsystem for Linux) enables Docker to run efficiently by providing a lightweight Linux environment without requiring a full virtual machine.
 ## 1. Install Windows Subsystem for Linux (WSL)
 
 ### Step 1: Enable WSL
@@ -17,16 +19,6 @@ wsl --set-default-version 2
 ### Step 2: Restart Your Computer
 Some changes require a system restart.
 
-### Step 3: Verify Installation
-After restarting, open a new PowerShell window and check the installed distributions:
-```powershell
-wsl -l -v
-```
-If no distributions are installed, you can manually install Ubuntu with:
-```powershell
-wsl --install -d Ubuntu
-```
-
 ---
 
 ## 2. Install Docker on Windows
@@ -34,21 +26,27 @@ wsl --install -d Ubuntu
 ### Step 1: Download and Install Docker Desktop
 - Go to the official Docker website: [https://www.docker.com/products/docker-desktop/](https://www.docker.com/products/docker-desktop/)
 - Download the latest version of **Docker Desktop for Windows**.
-- Run the installer and follow the setup instructions.
 
-### Step 2: Enable WSL 2 Backend (Recommended)
+<p align="center">
+  <img src='https://github.com/chiaramaccani/Scientific_Computing_for_Physics_Students/blob/main/task01/images/Docker01.png?raw=true' alt='Docker Image 1' style='width:500px;'/>
+</p>
+
+- Run the installer and follow the setup instructions.
+- 
+<p align="center">
+  <img src='https://github.com/chiaramaccani/Scientific_Computing_for_Physics_Students/blob/main/task01/images/Docker02.JPG?raw=true' alt='Docker Image 2' style='width:390px;'/>
+  <img src='https://github.com/chiaramaccani/Scientific_Computing_for_Physics_Students/blob/main/task01/images/Docker03.JPG?raw=true' alt='Docker Image 3' style='width:390px;'/>
+</p>
+
+
+### Step 2: Enable WSL 2 Backend (if not done by default or if not asked during installation)
 - Open **Docker Desktop**.
 - Go to **Settings > General**.
 - Enable **Use the WSL 2 based engine**.
 - Click **Apply & Restart**.
 
-### Step 3: Add Your Linux Distribution to Docker
-- In **Docker Desktop**, go to **Settings > Resources > WSL Integration**.
-- Enable integration for your preferred WSL distribution (e.g., Ubuntu).
-- Click **Apply & Restart**.
-
-### Step 4: Verify Docker Installation
-Open a **WSL terminal** (Ubuntu) or **PowerShell** and run:
+### Step 3: Verify Docker Installation
+Open a **WSL terminal** or **PowerShell** and run:
 ```sh
 docker --version
 ```
@@ -59,55 +57,3 @@ docker run hello-world
 If the installation is successful, you will see a message confirming that Docker is working.
 
 ---
-
-## 3. Additional Commands
-
-### Check Installed WSL Versions
-```powershell
-wsl -l -v
-```
-
-### Set Default WSL Version to 2
-```powershell
-wsl --set-default-version 2
-```
-
-### Update WSL Kernel (If Needed)
-If you encounter errors, update the WSL kernel:
-```powershell
-wsl --update
-```
-
----
-
-## 4. Uninstalling WSL or Docker
-
-### Uninstall WSL
-```powershell
-wsl --unregister <DistroName>
-```
-To remove WSL completely:
-1. Open **Control Panel > Programs and Features**.
-2. Uninstall **Windows Subsystem for Linux Update**.
-3. Disable WSL in PowerShell:
-   ```powershell
-   dism.exe /online /disable-feature /featurename:Microsoft-Windows-Subsystem-Linux /norestart
-   ```
-
-### Uninstall Docker
-- Open **Control Panel > Programs and Features**.
-- Find **Docker Desktop** and click **Uninstall**.
-
----
-
-## 5. Troubleshooting
-
-### WSL Installation Issues
-- If `wsl --install` fails, manually install it from the Microsoft Store.
-- Ensure **Virtualization** is enabled in BIOS.
-- Run `wsl --update` to get the latest kernel.
-
-### Docker Issues
-- Make sure **WSL 2 Backend** is enabled in Docker settings.
-- Restart **Docker Desktop** and **WSL** (`wsl --shutdown`).
-- Ensure your Linux distribution is running on WSL 2 (`wsl -l -v`).
