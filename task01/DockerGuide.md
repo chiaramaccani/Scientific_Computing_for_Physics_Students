@@ -62,11 +62,20 @@ If the installation was successful, it will be printed something like `Docker ve
 
 ## 3. Install Docker on Windows
 - Open a **Terminal** (you can open it directly in Docker Desktop clicking on the icon in the bottom right corner)
-- Download the Almalinux9 Image:
+- Download the **Almalinux9 Image**:
  ```sh
 docker pull almalinux:9
 ```
 If the command is exectued correcly, the AlmaLinux9 image should appear in Docker Desktop.
 <p align="center">
-  <img src='https://github.com/chiaramaccani/Scientific_Computing_for_Physics_Students/blob/main/task01/images/Docker10.png?raw=true' alt='Docker Image 10' style='width:700px;'/>
+  <img src='https://github.com/chiaramaccani/Scientific_Computing_for_Physics_Students/blob/main/task01/images/Docker10.JPG?raw=true' alt='Docker Image 10' style='width:700px;'/>
+</p>
+- Start an new Almalinux9 container in interactive mode (`-it`), choosing the container name (for example `SciCompAL9`).
+```sh
+docker run -it --name [NAME] almalinux:9 bash
+```
+If the command is exectued correcly, the new container should appear in Docker Desktop.
+
+<p align="center">
+  <img src='https://github.com/chiaramaccani/Scientific_Computing_for_Physics_Students/blob/main/task01/images/Docker09.JPG?raw=true' alt='Docker Image 10' style='width:700px;'/>
 </p>
