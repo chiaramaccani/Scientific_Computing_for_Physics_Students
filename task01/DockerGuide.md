@@ -1,7 +1,11 @@
-# Installing WSL and Docker on Windows
+# Installing an Almalinux9 container in Docker on Windows
+
 Docker is a platform that allows you to package applications and their dependencies into isolated containers, ensuring they run consistently across different environments. It simplifies deployment, enhances scalability, and avoids compatibility issues.
 
-On Windows, Docker relies on a Linux-based architecture, so installing WSL (Windows Subsystem for Linux) enables Docker to run efficiently by providing a lightweight Linux environment without requiring a full virtual machine.
+With Docker, you can install and run containers with different operating systems, including **AlmaLinux 9**, which is a stable and secure Linux distribution widely used in enterprise environments.
+
+On Windows, Docker relies on a Linux-based architecture, so installing WSL (Windows Subsystem for Linux) enables Docker to run efficiently by providing a lightweight Linux environment without requiring a full virtual machine. This is essential for running Linux-based containers like AlmaLinux 9 on Windows.
+
 ## 1. Install Windows Subsystem for Linux (WSL)
 
 ### Step 1: Enable WSL
@@ -28,15 +32,16 @@ Some changes require a system restart.
 - Download the latest version of **Docker Desktop for Windows**.
 
 <p align="center">
-  <img src='https://github.com/chiaramaccani/Scientific_Computing_for_Physics_Students/blob/main/task01/images/Docker01.png?raw=true' alt='Docker Image 1' style='width:500px;'/>
+  <img src='https://github.com/chiaramaccani/Scientific_Computing_for_Physics_Students/blob/main/task01/images/Docker01.png?raw=true' alt='Docker Image 1' style='width:700px;'/>
 </p>
 
-- Run the installer and follow the setup instructions.
+- Run the installer and follow the setup instructions
 - 
 <p align="center">
   <img src='https://github.com/chiaramaccani/Scientific_Computing_for_Physics_Students/blob/main/task01/images/Docker02.JPG?raw=true' alt='Docker Image 2' style='width:390px;'/>
   <img src='https://github.com/chiaramaccani/Scientific_Computing_for_Physics_Students/blob/main/task01/images/Docker03.JPG?raw=true' alt='Docker Image 3' style='width:390px;'/>
 </p>
+- Open **Docker Desktop** and create an account (you can also use Github or Google accounts)
 
 
 ### Step 2: Enable WSL 2 Backend (if not done by default or if not asked during installation)
@@ -50,10 +55,18 @@ Open a **WSL terminal** or **PowerShell** and run:
 ```sh
 docker --version
 ```
-To test Docker, run:
-```sh
-docker run hello-world
-```
-If the installation is successful, you will see a message confirming that Docker is working.
+If the installation was successful, it will be printed something like `Docker version 27.5.1, build 9f9e405`
 
 ---
+
+
+## 3. Install Docker on Windows
+- Open a **Terminal** (you can open it directly in Docker Desktop clicking on the icon in the bottom right corner)
+- Download the Almalinux9 Image:
+ ```sh
+docker pull almalinux:9
+```
+If the command is exectued correcly, the AlmaLinux9 image should appear in Docker Desktop.
+<p align="center">
+  <img src='https://github.com/chiaramaccani/Scientific_Computing_for_Physics_Students/blob/main/task01/images/Docker10.png?raw=true' alt='Docker Image 10' style='width:700px;'/>
+</p>
