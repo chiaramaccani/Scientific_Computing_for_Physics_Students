@@ -28,7 +28,9 @@ Some changes require a system restart.
 - Download the latest version of **Docker Desktop for Windows**.
 - Run the installer and follow the setup instructions.
 
-<img align='left' src='[https://github.com/chiaramaccani/PoD_Master_Thesis/blob/main/Figures/IR3_setup.jpg?raw=true](https://github.com/chiaramaccani/Scientific_Computing_for_Physics_Students/blob/main/task01/images/Docker02.JPG)' alt='Drawing' style='width:390px;'/><img align='right' src='[https://github.com/chiaramaccani/PoD_Master_Thesis/blob/main/Figures/DD4hep_outgoing_angle_distribution.jpg?raw=true](https://github.com/chiaramaccani/Scientific_Computing_for_Physics_Students/blob/main/task01/images/Docker03.JPG)' alt='Drawing' style='width:390px;'/>
+<img align='left' src='https://github.com/chiaramaccani/Scientific_Computing_for_Physics_Students/blob/main/task01/images/Docker02.JPG?raw=true' alt='Docker Image 1' style='width:390px;'/>
+<img align='right' src='https://github.com/chiaramaccani/Scientific_Computing_for_Physics_Students/blob/main/task01/images/Docker03.JPG?raw=true' alt='Docker Image 2' style='width:390px;'/>
+
 
 
 ### Step 2: Enable WSL 2 Backend (Recommended)
