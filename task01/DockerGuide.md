@@ -1,7 +1,5 @@
 # Installing WSL and Docker on Windows
 
-
-
 ## 1. Install Windows Subsystem for Linux (WSL)
 
 ### Step 1: Enable WSL
@@ -26,19 +24,23 @@ Some changes require a system restart.
 ### Step 1: Download and Install Docker Desktop
 - Go to the official Docker website: [https://www.docker.com/products/docker-desktop/](https://www.docker.com/products/docker-desktop/)
 - Download the latest version of **Docker Desktop for Windows**.
-- <img align='left' src='https://github.com/chiaramaccani/Scientific_Computing_for_Physics_Students/blob/main/task01/images/Docker01.png?raw=true' alt='Docker Image 1' style='width:500px;'/>
-<p>- Run the installer and follow the setup instructions.</p>
 
-<img align='left' src='https://github.com/chiaramaccani/Scientific_Computing_for_Physics_Students/blob/main/task01/images/Docker02.JPG?raw=true' alt='Docker Image 1' style='width:390px;'/>
-<img align='right' src='https://github.com/chiaramaccani/Scientific_Computing_for_Physics_Students/blob/main/task01/images/Docker03.JPG?raw=true' alt='Docker Image 2' style='width:390px;'/>
-<div style="clear: both;"></div>
+<p align="center">
+  <img src='https://github.com/chiaramaccani/Scientific_Computing_for_Physics_Students/blob/main/task01/images/Docker01.png?raw=true' alt='Docker Image 1' style='width:500px;'/>
+</p>
 
+- Run the installer and follow the setup instructions.
 
-<p>### Step 2: Enable WSL 2 Backend (Recommended)</p>
+### Step 2: Enable WSL 2 Backend (Recommended)
 - Open **Docker Desktop**.
 - Go to **Settings > General**.
 - Enable **Use the WSL 2 based engine**.
 - Click **Apply & Restart**.
+
+<p align="center">
+  <img src='https://github.com/chiaramaccani/Scientific_Computing_for_Physics_Students/blob/main/task01/images/Docker02.JPG?raw=true' alt='Docker Image 2' style='width:390px;'/>
+  <img src='https://github.com/chiaramaccani/Scientific_Computing_for_Physics_Students/blob/main/task01/images/Docker03.JPG?raw=true' alt='Docker Image 3' style='width:390px;'/>
+</p>
 
 ### Step 3: Verify Docker Installation
 Open a **WSL terminal** or **PowerShell** and run:
