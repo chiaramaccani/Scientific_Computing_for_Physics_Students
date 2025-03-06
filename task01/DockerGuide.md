@@ -70,9 +70,10 @@ docker pull almalinux:9
 If the command is exectued correcly, the AlmaLinux9 image should appear in Docker Desktop.
 <p align="center">
   <img src='https://github.com/chiaramaccani/Scientific_Computing_for_Physics_Students/blob/main/task01/images/Docker10.JPG?raw=true' alt='Docker Image 10' style='width:1000px;'/>
-</p0
+</p0>
 
 ### Step 2: Run a new Almalinux9 Container
+
 - Start an new **Almalinux9 Container** in interactive mode (`-it`), choosing the container name (for example `SciCompAL9`).
 
 ```sh
