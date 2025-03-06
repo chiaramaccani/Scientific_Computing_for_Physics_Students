@@ -32,7 +32,7 @@ Some changes require a system restart.
 - Download the latest version of **Docker Desktop for Windows**.
 
 <p align="center">
-  <img src='https://github.com/chiaramaccani/Scientific_Computing_for_Physics_Students/blob/main/task01/images/Docker01.png?raw=true' alt='Docker Image 1' style='width:700px;'/>
+  <img src='https://github.com/chiaramaccani/Scientific_Computing_for_Physics_Students/blob/main/task01/images/Docker01.png?raw=true' alt='Docker Image 1' style='width:1000px;'/>
 </p>
 
 - Run the installer and follow the setup instructions
@@ -68,14 +68,35 @@ docker pull almalinux:9
 ```
 If the command is exectued correcly, the AlmaLinux9 image should appear in Docker Desktop.
 <p align="center">
-  <img src='https://github.com/chiaramaccani/Scientific_Computing_for_Physics_Students/blob/main/task01/images/Docker10.JPG?raw=true' alt='Docker Image 10' style='width:700px;'/>
-</p>
-- Start an new Almalinux9 container in interactive mode (`-it`), choosing the container name (for example `SciCompAL9`).
+  <img src='https://github.com/chiaramaccani/Scientific_Computing_for_Physics_Students/blob/main/task01/images/Docker10.JPG?raw=true' alt='Docker Image 10' style='width:1000px;'/>
+</p0
+
+
+- Start an new **Almalinux9 container** in interactive mode (`-it`), choosing the container name (for example `SciCompAL9`).
+
 ```sh
 docker run -it --name [NAME] almalinux:9 bash
 ```
+
 If the command is exectued correcly, the new container should appear in Docker Desktop.
 
 <p align="center">
-  <img src='https://github.com/chiaramaccani/Scientific_Computing_for_Physics_Students/blob/main/task01/images/Docker09.JPG?raw=true' alt='Docker Image 10' style='width:700px;'/>
+  <img src='https://github.com/chiaramaccani/Scientific_Computing_for_Physics_Students/blob/main/task01/images/Docker09.JPG?raw=true' alt='Docker Image 10' style='width:1000px;'/>
 </p>
+
+To check that the correct OS is running, check the output of the command
+```sh
+cat /etc/os-release
+```
+- To **exit** the container
+```sh
+exit
+```
+and to **stop** it
+```sh
+docker stop [NAME]
+```
+- To **start** the container again in interactive mode
+```sh
+docker start -ai [NAME]
+```
