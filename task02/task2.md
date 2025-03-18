@@ -9,7 +9,7 @@ a = 3
 dim_list = [10, 1e6, 1e8]
 x_value = 0.1
 y_value = 7.1
-d_expected = 3.0*0.1+7.1
+d_expected = a * x_value + y_value
 
 for dim in dim_list:
     x = np.full(int(dim), x_value)
@@ -254,3 +254,13 @@ Test passed for dim = 10000
 All elements of C are equal to 21.30
 Time taken: 0.341929 seconds
 ```
+
+## Exercise 4.
+
+1. Did you find any problems in running the codes for some N. If so, do you have an idea why?
+
+It was possible to run the code for large values of N, even in Python, with times comparable to C. This surprised me initially, but it’s thanks to the NumPy library, which is also written in C. Unlike my C code, NumPy can execute operations in parallel, allowing it to run more efficiently, especially for large dimensions.
+
+2. Where you able to test correctly the sum and product of points 1-3? If so, how? If not, what was the problem?
+
+My Python code initially failed due to an issue with floating-point precision. I wrote the condition as `np.all(d == 7.4)` instead of computing the expected value (`d_expected = a * x_value + y_value`). however the best approach would be to use `np.isclose()` and set a tolerance.
