@@ -90,4 +90,8 @@ Relative error: 0.0
 ```
 in this case the difference between the integral computed with C and the one computed with python using the trapezoidal rule is `-6.439293542825908e-14`.
 
-One can also use the method `scipy.integrate.quad` in the library **`scipy`**  which performs   adaptive quadratur  using **QUADPACK**, a Fortran library.
+The difference between the results computed in C and python is given to the fact that they make use of different compilers.
+
+[One can also use the method `scipy.integrate.quad` in the library **`scipy`**  which performs   adaptive quadratur  using **QUADPACK**, a Fortran library. This methos give same results of the corrispondent algorith in GSL.]
+
+
