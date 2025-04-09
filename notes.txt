@@ -1,0 +1,4 @@
+absolute errors are less inforormative than relative error beacuse you don't know the result 
+compilers can do different things in the same equations (compilation can moify your floating point )
+
+change flag or programming language or change operating system
