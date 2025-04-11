@@ -34,7 +34,7 @@ $$\mathrm{Var}(d_i) = a^2 \cdot \mathrm{Var}(x_i) + \mathrm{Var}(y_i) = a^2 \cdo
 
 - Empirical resuts:
 
-  $$\mathbb{E}[d_i] = a \cdot \mathbb{E}[x_i] + \mathbb{E}[y_i] = a \cdot \mu_x + \mu_y$$
+  $$\hat{\mu}_d = \frac{1}{N} \sum_{i=1}^{N} d_i$$$
  
 $$\hat{\mu}_d = \frac{1}{N} \sum_{i=1}^{N} d_i$$
 
