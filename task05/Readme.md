@@ -21,7 +21,7 @@ Sum with Kahan (long double): 0.50000000000000000000
 
 ## Part 2)
 
-Two independent vectors `x` and `y` of length `N` are generated sampling from a standard normal distribution (mean = 0, variance = 1) using the GSL library. The vector `d` is then computed as:
+Two independent vectors `x` and `y` of length `N` are generated sampling from a standard normal distribution (mean = 0, variance = 1) using the GSL library. The vector `d` is then computed as
 $\mathbf{d} = a \cdot \mathbf{x} + \mathbf{y}$, with `a=3`.
 
 By comparing the empirical results with the expected values, we can verify the correctness of the computation.
@@ -33,6 +33,8 @@ $$\mathbb{E}[d_i] = a \cdot \mathbb{E}[x_i] + \mathbb{E}[y_i] = a \cdot \mu_x + 
 $$\mathrm{Var}(d_i) = a^2 \cdot \mathrm{Var}(x_i) + \mathrm{Var}(y_i) = a^2 \cdot \sigma_x^2 + \sigma_y^2$$
 
 - Empirical resuts:
+
+  $$\mathbb{E}[d_i] = a \cdot \mathbb{E}[x_i] + \mathbb{E}[y_i] = a \cdot \mu_x + \mu_y$$
  
 $$\hat{\mu}_d = \frac{1}{N} \sum_{i=1}^{N} d_i$$
 
