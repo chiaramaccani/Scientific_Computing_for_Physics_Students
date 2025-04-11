@@ -33,10 +33,9 @@ int main(int argc, char** argv) {
 
     double g;
     for (size_t i = 0; i < N; ++i) {
-        g = gsl_ran_gaussian(r, sigma); // mean = 0, std dev = sigma
-        //printf("g: %lf\n", g);
+        g = gsl_ran_gaussian(r, sigma); 
         gsl_vector_set(x, i, g);
-        g = gsl_ran_gaussian(r, sigma); // mean = 0, std dev = sigma
+        g = gsl_ran_gaussian(r, sigma); 
         gsl_vector_set(y, i, g);
     }
 
@@ -44,11 +43,8 @@ int main(int argc, char** argv) {
     gsl_vector_memcpy(d, y);
     gsl_vector_axpby(a, x, 1.0, d);
 
-    printf("x[0]: %lf, y[0]: %lf, d[0]: %lf\n", gsl_vector_get(x, 0), gsl_vector_get(y, 0), gsl_vector_get(d, 0));
+    //printf("x[0]: %lf, y[0]: %lf, d[0]: %lf\n", gsl_vector_get(x, 0), gsl_vector_get(y, 0), gsl_vector_get(d, 0));
 
-
-
-    // Compute empirical mean and variance of d
     double sum = 0.0, sumsq = 0.0;
     for (size_t i = 0; i < N; ++i) {
         double di = gsl_vector_get(d, i);
@@ -60,7 +56,7 @@ int main(int argc, char** argv) {
 
     const double mu_x = 0.0, sigma_x = 1.0;
     const double mu_y = 0.0, sigma_y = 1.0;
-    // Expected values
+
     double expected_mean = a * mu_x + mu_y;
     double expected_var = a * a * sigma_x * sigma_x + sigma_y * sigma_y;
 
