@@ -28,11 +28,13 @@ with `a=3`.
 By comparing the empirical results with the expected values, we can verify the correctness of the computation.
 
 - Expected values:
+  
 $$\mathbb{E}[d_i] = a \cdot \mathbb{E}[x_i] + \mathbb{E}[y_i] = a \cdot \mu_x + \mu_y$$
 
 $$\mathrm{Var}(d_i) = a^2 \cdot \mathrm{Var}(x_i) + \mathrm{Var}(y_i) = a^2 \cdot \sigma_x^2 + \sigma_y^2$$
 
 - Empirical resuts:
+  
 $$\hat{\mu}_d = \frac{1}{N} \sum_{i=1}^{N} d_i$$
 
 $$\hat{\sigma}^2_d = \frac{1}{N} \sum_{i=1}^{N} d_i^2 - \hat{\mu}_d^2$$
