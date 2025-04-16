@@ -29,7 +29,7 @@ The mean relative error  is larger because some matrix entries may be close to z
 
 ## Question 6 
 The first element of both `C` and `R` is equal to the sum of all elements in matrix `A`.  
-In a 2D FFT, the `[0, 0]` component represents the so called DC (zero-frequency) term, which captures the overall average or constant part of the signal.  
+In a 2D FFT, the `[0, 0]` component is the so called DC (zero-frequency) term, which represents the overall average of the signal.  
 Since matrix `A` is filled with values close to 1, the first element is expected to be around `1 × 1000 × 1000 = 1000000`.
 
 ```
